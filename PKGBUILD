@@ -7,7 +7,7 @@ url="https://workonfi.re"
 license=('WTFPL')
 source=("${pkgname}".sh::https://raw.githubusercontent.com/workonfire/"${pkgname}"/master/"${pkgname}".sh
         LICENSE::https://raw.githubusercontent.com/workonfire/"${pkgname}"/master/LICENSE)
-sha256sums=('cbe14c6ca69a5efe93e3050a47e4005aa7044d0ffe404fdcecf087b596aef716'
+sha256sums=('14b24b9b071b5565f914d6c0302162ebf37b8f5a0ec56495ee59fedd3d47264d'
             '7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40')
 
 package() {
