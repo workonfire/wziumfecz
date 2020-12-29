@@ -6,7 +6,7 @@ arch=('any')
 url="https://workonfi.re"
 license=('WTFPL')
 source=("${pkgname}".sh::https://raw.githubusercontent.com/workonfire/wziumfecz/master/"$pkgname".sh)
-sha256sums=('8bf435723f3f5782c02b9b25188d2f9ddbf442798eaac9f5505abc04c23e8e29')
+sha256sums=('cbe14c6ca69a5efe93e3050a47e4005aa7044d0ffe404fdcecf087b596aef716')
 
 package() {
     plain "\033[0;34m:: \033[0mWziumowanie skryptu instalacyjnego..."
