@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # wziumfecz installer
 # dla ludzi żyjących w biedzie bez Arcz Linuksa
