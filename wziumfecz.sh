@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 me=$(whoami)
 os=$(source /etc/os-release; echo $NAME)
