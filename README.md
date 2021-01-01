@@ -2,7 +2,7 @@
 
 An incredibly simple app like *neofetch*, but better.
 
-![Screenshot](https://i.imgur.com/NJIx74v.png)
+![Screenshot](https://i.imgur.com/e4s7kHO.png)
 
 ## Why is it better than *neofetch*?
 The answer is simple. It wziums, and neofetch does not.
