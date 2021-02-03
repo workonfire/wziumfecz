@@ -1,20 +1,22 @@
 pkgname=wziumfecz-git
-pkgver=1.0.0
+pkgver=r8.27f8ab3
 pkgrel=1
 pkgdesc="Just like neofetch but better!"
 arch=('any')
 provides=('wziumfecz')
 url="https://workonfi.re"
 license=('WTFPL')
-source=("${pkgname}".sh::https://raw.githubusercontent.com/workonfire/"${pkgname}"/master/"${pkgname}".sh
-        LICENSE::https://raw.githubusercontent.com/workonfire/"${pkgname}"/master/LICENSE)
-sha256sums=('c19a4bf7c4093a7b64a9d91f21787ff9481e8db93af530219df6edc4ac4c3161'
-            '7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40')
+source=("${pkgname}"::git+https://github.com/workonfire/wziumfecz.git)
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
 
 package() {
-    plain "\033[0;34m:: \033[0mWziumowanie skryptu instalacyjnego..."
-    install -Dm755 "${srcdir}"/wziumfecz.sh "${pkgdir}"/usr/bin/wziumfecz
-    install -Dm644 "${srcdir}"/LICENSE "${pkgdir}"/usr/share/licenses/"${pkgname}"/LICENSE
-    msg2 "Zainstalowano wziumfecz'a w: \033[1;36mpakiet Arch Linux'a"
-    plain "\033[1;32m:: \033[0mZwziumowano pomyślnie."
+    echo -e "\033[0;34m:: \033[0mWziumowanie skryptu instalacyjnego..."
+    install -Dm755 "${srcdir}"/"${pkgname}"/wziumfecz.sh "${pkgdir}"/usr/bin/wziumfecz
+    install -Dm644 "${srcdir}"/"${pkgname}"/LICENSE "${pkgdir}"/usr/share/licenses/"${pkgname}"/LICENSE
+    echo -e "\033[1;32m:: \033[0mZwziumowano pomyślnie."
 }

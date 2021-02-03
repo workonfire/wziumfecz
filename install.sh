@@ -10,16 +10,21 @@ install_arch() {
         then
             sudo pacman -S base-devel
     fi
+    mkdir ${file_name}-workdir
+    cd ${file_name}-workdir
+    curl https://raw.githubusercontent.com/workonfire/wziumfecz/main/PKGBUILD > PKGBUILD
     makepkg -si
-    rm $file_name-*.tar.zst
-    rm -rf pkg src
+    cd ..
+    rm -rf ${file_name}-workdir
 }
 
 install() {
     install_path="$HOME"
     script_name="$file_name.sh"
     file_path="$install_path/$script_name"
-
+    
+    git clone https://github.com/workonfire/${file_name}.git
+    cd $file_name
     echo -e "\033[0;34m:: \033[0mWziumowanie skryptu instalacyjnego..."
     cp $script_name $file_path
     cd $install_path
