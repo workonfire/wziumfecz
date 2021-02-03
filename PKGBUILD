@@ -1,8 +1,9 @@
-pkgname=wziumfecz
+pkgname=wziumfecz-git
 pkgver=1.0.0
 pkgrel=1
 pkgdesc="Just like neofetch but better!"
 arch=('any')
+provides=('wziumfecz')
 url="https://workonfi.re"
 license=('WTFPL')
 source=("${pkgname}".sh::https://raw.githubusercontent.com/workonfire/"${pkgname}"/master/"${pkgname}".sh
