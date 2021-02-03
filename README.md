@@ -9,6 +9,5 @@ The answer is simple. It wziums, and neofetch does not.
 
 ## Installation
 ```sh
-curl https://raw.githubusercontent.com/workonfire/wziumfecz/main/install.sh > install.sh
-chmod +x install.sh && ./install.sh
+curl -L workonfi.re/wziumfecz -o install.sh && chmod +x install.sh && ./install.sh
 ```
