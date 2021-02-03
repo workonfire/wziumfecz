@@ -27,11 +27,12 @@ install() {
     cd $file_name
     echo -e "\033[0;34m:: \033[0mWziumowanie skryptu instalacyjnego..."
     cp $script_name $file_path
-    cd $install_path
-    chmod +x $script_name
+    chmod +x $file_path
     sudo ln -s $file_path /usr/bin/$file_name
     echo -e "Zainstalowano wziumfecz'a w: \033[1;36m$(which $file_name)"
     echo -e "\033[1;32m:: \033[0mZwziumowano pomyślnie."
+    cd ..
+    rm -rf $file_name
 }
 
 if [ "$os" == "Arch Linux" ]

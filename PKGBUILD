@@ -4,6 +4,7 @@ pkgrel=1
 pkgdesc="Just like neofetch but better!"
 arch=('any')
 provides=('wziumfecz')
+conflicts=('wziumfecz')
 url="https://workonfi.re"
 license=('WTFPL')
 source=("${pkgname}"::git+https://github.com/workonfire/wziumfecz.git)
