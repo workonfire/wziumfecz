@@ -2,13 +2,14 @@
 
 # wziumfecz installer
 
-os=$(source /etc/os-release; echo $NAME)
+os_id=$(source /etc/os-release; echo $ID)
+os_id_like=$(source /etc/os-release; echo $ID_LIKE)
 file_name="wziumfecz"
         
 install_arch() {
-    if ! pacman -Qg base-devel &> /dev/null
+    if ! pacman -Q base-devel &> /dev/null
         then
-            sudo pacman -S base-devel
+            sudo pacman -S --needed base-devel
     fi
     mkdir ${file_name}-workdir
     cd ${file_name}-workdir
@@ -35,10 +36,11 @@ install() {
     rm -rf $file_name
 }
 
-if [ "$os" == "Arch Linux" ]
+if [ "$os_id" == "arch" ] || [ "$os_id_like" == "arch" ]
     then
         install_arch
     else
-        echo "Instalowanie wziumfecz'a..."
+        echo "Instalowanie wziumfecza..."
         install
+        echo -e "\033[1;32m:: \033[0mZwziumowano pomyślnie."
 fi
